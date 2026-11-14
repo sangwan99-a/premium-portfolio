@@ -64,7 +64,7 @@ export const STATS = [];
 export const JOURNEY = [
   { year: '2024', role: 'Bachelor of Arts (B.A.)', place: 'SGT University, Gurugram', note: 'Completed in 2024' },
   { year: '2026', role: 'Master of Arts (M.A.)', place: 'SGT University, Gurugram', note: 'Completed in 2026' },
-  { year: '2026', role: 'Full Stack Developer', place: 'Personal Projects', note: 'Java · Spring Boot · React · AWS' },
+  { year: '2024–Present', role: 'Freelance Full Stack Developer', place: 'Self-employed', note: 'Independent client projects · Java · Spring Boot · React · AWS' },
 ];
 
 export const CERTS = [];
