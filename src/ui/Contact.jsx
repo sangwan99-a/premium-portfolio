@@ -83,8 +83,8 @@ export default function Contact() {
         </Magnetic>
       </div>
       <footer className="foot">
-        <span className="mono dim">© 2026 Shamya Lohitha</span>
-        <span className="mono dim">Full Stack · AI</span>
+        <span className="mono dim">© 2026 Sahil Sangwan</span>
+        <span className="mono dim">Full Stack · Java · React</span>
       </footer>
     </div>
   );
