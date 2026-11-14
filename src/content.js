@@ -1,57 +1,41 @@
 export const GROUPS = {
-  Languages: ['C++', 'Java', 'Python', 'JavaScript', 'TypeScript', 'SQL'],
-  Frontend: ['React', 'React Native', 'HTML', 'CSS', 'Tailwind', 'Framer Motion'],
-  Backend: ['Node.js', 'Express', 'Spring Boot', 'FastAPI', 'Go', 'REST APIs'],
-  Data: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis'],
-  Tools: ['Docker', 'Git', 'JWT', 'Postman', 'Electron'],
-  Core: ['DSA', 'OOP', 'System Design', 'API Design', 'Machine Learning', 'NLP', 'Data Science'],
+  Languages: ['Java'],
+  Frontend: ['React'],
+  Backend: ['Spring Boot'],
+  Data: ['MongoDB', 'PostgreSQL'],
+  Cloud: ['AWS'],
+  Tools: ['Git', 'Jenkins'],
 };
 export const SKILLS = Object.entries(GROUPS).flatMap(([g, ws]) => ws.map((w) => ({ w, g })));
 
+// Replace these starter cards with links and details for your real projects.
 export const PROJECTS = [
-  {
-    tag: 'AI · Privacy',
-    title: 'PolicyGuard',
-    em: 'AI',
-    desc: 'Reads privacy policies and contracts so people don’t have to — risk detection, privacy alerts and a live risk score across web, desktop and mobile.',
-    stack: ['React', 'React Native', 'Electron', 'Node.js', 'OpenAI', 'MongoDB', 'Docker'],
-  },
-  {
-    tag: 'ML · Real-time',
-    title: 'Release Risk',
-    em: 'Heatmap',
-    desc: 'A Random Forest model classifies every software release by risk, mapped as a live heatmap across teams and modules.',
-    stack: ['TypeScript', 'React', 'FastAPI', 'scikit-learn', 'PostgreSQL'],
-  },
-  {
-    tag: 'AI · Fashion',
-    title: 'StarCloset',
-    em: 'Myntra',
-    desc: 'A conversational AI stylist that builds head-to-toe outfits from your occasion, budget and taste — powered by stylist personas.',
-    stack: ['Go', 'Gin', 'Redis', 'PostgreSQL', 'LLM', 'Framer Motion'],
-  },
+  { tag: 'Add your project', title: 'Project One', em: 'Soon', desc: 'Add a short summary of a project you have built, the problem it solves, and your contribution.', stack: ['Java', 'Spring Boot', 'React'] },
+  { tag: 'Add your project', title: 'Project Two', em: 'Soon', desc: 'Add another project description here. Include the technologies you used and what makes the project useful.', stack: ['MongoDB', 'PostgreSQL'] },
+  { tag: 'Add your project', title: 'Project Three', em: 'Soon', desc: 'Showcase a third project here. Replace this starter content with your own work before publishing.', stack: ['AWS', 'Jenkins', 'Git'] },
 ];
 
+// No coding-platform totals or credentials were supplied, so these remain neutral placeholders.
 export const STATS = [
-  { label: 'LeetCode', value: 450, suffix: '+', h: 4.5 },
-  { label: 'CodeChef', value: 500, suffix: '+', h: 5.0 },
-  { label: 'GeeksforGeeks', value: 280, suffix: '+', h: 2.8 },
-  { label: 'HackerRank', value: 20, suffix: '★', h: 2.0 },
+  { label: 'Add platform', value: 0, suffix: '', h: 0.4 },
+  { label: 'Add total', value: 0, suffix: '', h: 0.4 },
+  { label: 'Add platform', value: 0, suffix: '', h: 0.4 },
+  { label: 'Add total', value: 0, suffix: '', h: 0.4 },
 ];
 
 export const JOURNEY = [
-  { year: '2021', role: 'Intermediate, MPC', place: 'Sri Chaitanya Junior College', note: '2021 — 2023 · 90.6%' },
-  { year: '2023', role: 'B.Tech, Data Science', place: 'Aditya College of Engineering & Technology', note: '2023 — 2027 · CGPA 9.07 · Department Topper' },
-  { year: '2026', role: 'Full Stack Intern', place: 'Technical Hub', note: 'May — June · Web & mobile apps with React Native' },
+  { year: '01', role: 'Add your education', place: 'Add institution and qualification', note: 'Add dates and relevant details' },
+  { year: '02', role: 'Add your experience', place: 'Add company, internship, or role', note: 'Add dates and key contributions' },
+  { year: '03', role: 'Add your next milestone', place: 'Add another education or career milestone', note: 'Add dates and relevant details' },
 ];
 
 export const CERTS = [
-  ['MongoDB', 'Associate Developer'],
-  ['Oracle', 'Java Foundations Associate'],
-  ['Microsoft', 'GitHub Foundations'],
-  ['Google Cloud', 'Career Launchpad — Data Analytics'],
-  ['Cisco', 'JavaScript Essentials 1 & 2'],
-  ['Cisco', 'Python & Intro to Data Science'],
-  ['Certiport · Pearson', 'HTML & CSS'],
-  ['CLA', 'Programming Essentials in C / C++'],
+  ['Add issuer', 'Add certification name'],
+  ['Add issuer', 'Add certification name'],
+  ['Add issuer', 'Add certification name'],
+  ['Add issuer', 'Add certification name'],
+  ['Add issuer', 'Add certification name'],
+  ['Add issuer', 'Add certification name'],
+  ['Add issuer', 'Add certification name'],
+  ['Add issuer', 'Add certification name'],
 ];
