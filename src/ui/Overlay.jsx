@@ -100,12 +100,12 @@ export default function Overlay({ ready }) {
         'pnl-hero',
         <>
           <div className="hm-col">
-            <span className="mono dim">Shamya Lohitha</span>
+            <span className="mono dim">Sahil Sangwan</span>
             <span>Full Stack Developer</span>
           </div>
           <div className="hm-col right">
-            <span className="mono dim">AI · Systems · Interfaces</span>
-            <span>India — 2026</span>
+            <span className="mono dim">Java · React · Cloud</span>
+            <span>India · Available for opportunities</span>
           </div>
         </>,
         0.25
@@ -119,26 +119,26 @@ export default function Overlay({ ready }) {
         <>
           <span className="mono dim kicker">(01) — Enter</span>
           <p className="lead">
-            <Words text="I design and engineer *intelligent* products — scalable systems, calm interfaces, and AI that reads the *fine* *print.*" />
+            <Words text="I build *full-stack* applications with Java, Spring Boot, React, and cloud technologies — turning ideas into *reliable* digital products." />
           </p>
           <div className="stats">
             <div>
               <b>
-                <Count to={9.07} decimals={2} on={onSet.about} />
+                <Count to={0} decimals={0} on={onSet.about} />
               </b>
-              <span className="mono dim">CGPA</span>
+              <span className="mono dim">Add CGPA</span>
             </div>
             <div>
               <b>
-                <Count to={1230} on={onSet.about} />+
+                <Count to={0} on={onSet.about} />
               </b>
-              <span className="mono dim">Problems solved</span>
+              <span className="mono dim">Add achievements</span>
             </div>
             <div>
               <b>
-                0<Count to={8} on={onSet.about} />
+                0<Count to={0} on={onSet.about} />
               </b>
-              <span className="mono dim">Certifications</span>
+              <span className="mono dim">Add credentials</span>
             </div>
           </div>
         </>
@@ -235,13 +235,13 @@ export default function Overlay({ ready }) {
           <div className="honors">
             <div>
               <span className="hn-star">✦</span>
-              <span className="hn-big">Department Topper</span>
-              <span className="mono dim">Data Science</span>
+              <span className="hn-big">Add your achievement</span>
+              <span className="mono dim">Competition / academics</span>
             </div>
             <div>
               <span className="hn-star">✦</span>
-              <span className="hn-big">Top 100 Team</span>
-              <span className="mono dim">Myntra WeForShe HackerRamp 2026</span>
+              <span className="hn-big">Add another achievement</span>
+              <span className="mono dim">Replace with a verified result</span>
             </div>
           </div>
         </>,
@@ -278,7 +278,7 @@ export default function Overlay({ ready }) {
         <>
           <span className="mono dim">(06) Credentials</span>
           <h2 className="big">
-            <Words text="Eight *certifications*" />
+            <Words text="Your *certifications*" />
           </h2>
         </>,
         0.4
@@ -298,7 +298,7 @@ function Nav({ show }) {
   return (
     <nav className={`nav ${show ? 'show' : ''}`}>
       <button className="nav-mark" onClick={() => scrollToU(0)} aria-label="Back to start">
-        L<span>.</span>
+        S<span>.</span>
       </button>
       <div className="nav-links">
         {[
