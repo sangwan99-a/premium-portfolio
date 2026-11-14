@@ -34,6 +34,7 @@ npm run build
 
 **Name:** Sahil Sangwan  
 **Role:** Full Stack Developer  
+**Education:** B.A. (2024) and M.A. (2026), SGT University, Gurugram  
 **Skills:** Java, Spring Boot, React, AWS, MongoDB, Jenkins, PostgreSQL, Git  
 **GitHub:** https://github.com/sangwan99-a
 
