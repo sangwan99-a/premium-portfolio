@@ -139,7 +139,7 @@ export default function Overlay({ ready }) {
       )}
 
       {/* WORK */}
-      {PROJECTS.map((p, i) =>
+      {PROJECTS.slice(0, 3).map((p, i) =>
         P(
           `work${i}`,
           I[`work${i}`],
@@ -148,7 +148,7 @@ export default function Overlay({ ready }) {
             <div className="wc-top mono dim">
               <span>(02) Selected Work</span>
               <span>
-                0{i + 1} / 0{PROJECTS.length}
+                0{i + 1} / 03
               </span>
             </div>
             <span className="mono dim wc-tag">{p.tag}</span>
