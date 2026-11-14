@@ -100,11 +100,11 @@ export default function Overlay({ ready }) {
         'pnl-hero',
         <>
           <div className="hm-col">
-            <span className="mono dim">Shamya Lohitha</span>
+            <span className="mono dim">Sahil Sangwan</span>
             <span>Full Stack Developer</span>
           </div>
           <div className="hm-col right">
-            <span className="mono dim">AI · Systems · Interfaces</span>
+            <span className="mono dim">Java · Spring Boot · React</span>
             <span>India — 2026</span>
           </div>
         </>,
@@ -119,26 +119,20 @@ export default function Overlay({ ready }) {
         <>
           <span className="mono dim kicker">(01) — Enter</span>
           <p className="lead">
-            <Words text="I design and engineer *intelligent* products — scalable systems, calm interfaces, and AI that reads the *fine* *print.*" />
+            <Words text="I build *full-stack* applications — from dependable Java and Spring Boot services to responsive React interfaces and cloud-ready workflows." />
           </p>
           <div className="stats">
             <div>
-              <b>
-                <Count to={9.07} decimals={2} on={onSet.about} />
-              </b>
-              <span className="mono dim">CGPA</span>
+              <b>B.A.</b>
+              <span className="mono dim">Completed · 2024</span>
             </div>
             <div>
-              <b>
-                <Count to={1230} on={onSet.about} />+
-              </b>
-              <span className="mono dim">Problems solved</span>
+              <b>M.A.</b>
+              <span className="mono dim">Completed · 2026</span>
             </div>
             <div>
-              <b>
-                0<Count to={8} on={onSet.about} />
-              </b>
-              <span className="mono dim">Certifications</span>
+              <b>SGT</b>
+              <span className="mono dim">University · Gurugram</span>
             </div>
           </div>
         </>
@@ -169,6 +163,7 @@ export default function Overlay({ ready }) {
                 </li>
               ))}
             </ul>
+            <a className="mono dim wc-link" href={p.url} target="_blank" rel="noreferrer">View on GitHub ↗</a>
           </div>
         )
       )}
@@ -229,19 +224,19 @@ export default function Overlay({ ready }) {
           <div className="nb-head">
             <span className="mono dim">(04)</span>
             <h2 className="big">
-              <Words text="By the *Numbers*" />
+              <Words text="Core *Stack*" />
             </h2>
           </div>
           <div className="honors">
             <div>
               <span className="hn-star">✦</span>
-              <span className="hn-big">Department Topper</span>
-              <span className="mono dim">Data Science</span>
+              <span className="hn-big">Backend</span>
+              <span className="mono dim">Java · Spring Boot</span>
             </div>
             <div>
               <span className="hn-star">✦</span>
-              <span className="hn-big">Top 100 Team</span>
-              <span className="mono dim">Myntra WeForShe HackerRamp 2026</span>
+              <span className="hn-big">Full Stack & Cloud</span>
+              <span className="mono dim">React · AWS · MongoDB · PostgreSQL · Jenkins · Git</span>
             </div>
           </div>
         </>,
@@ -278,8 +273,9 @@ export default function Overlay({ ready }) {
         <>
           <span className="mono dim">(06) Credentials</span>
           <h2 className="big">
-            <Words text="Eight *certifications*" />
+            <Words text="Education & *Learning*" />
           </h2>
+          <span className="mono dim">B.A. 2024 · M.A. 2026 · SGT University, Gurugram</span>
         </>,
         0.4
       )}
@@ -298,7 +294,7 @@ function Nav({ show }) {
   return (
     <nav className={`nav ${show ? 'show' : ''}`}>
       <button className="nav-mark" onClick={() => scrollToU(0)} aria-label="Back to start">
-        L<span>.</span>
+        S<span>.</span>
       </button>
       <div className="nav-links">
         {[
