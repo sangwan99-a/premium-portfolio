@@ -1,10 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { useFrame, useThree } from '@react-three/fiber';
-import { useTexture } from '@react-three/drei';
-import portraitUrl from '../assets/lohitha.webp';
 import { store, clamp, lerp, ease, easeOut } from '../store.js';
-import { sampleWord, measure, glowTexture } from './textures.js';
+import { sampleWord, measure } from './textures.js';
 
 /* ---------------- Particle word: LOHITHA → PORTFOLIO ---------------- */
 const pointsVert = /* glsl */ `
@@ -59,9 +57,6 @@ void main(){
 }`;
 
 /* ---------------- Portrait materialising from smoke ---------------- */
-const portraitVert = /* glsl */ `
-varying vec2 vUv;
-void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`;
 const portraitFrag = /* glsl */ `
 uniform sampler2D uTex;
 uniform float uProgress, uTime;
@@ -120,13 +115,8 @@ const wordRatio = { v: 0.78 };
 export default function Hero() {
   const { size, camera, gl } = useThree();
   const [data, setData] = useState(null);
-  const tex = useTexture(portraitUrl);
-  tex.colorSpace = THREE.SRGBColorSpace;
-  tex.anisotropy = 8;
 
   const textGroup = useRef();
-  const portrait = useRef();
-  const halo = useRef();
   const rootRef = useRef();
   const mouseLocal = useMemo(() => new THREE.Vector2(9, 9), []);
 
@@ -140,8 +130,8 @@ export default function Hero() {
       const N = store.mobile ? 9000 : 22000;
       const norm = measure('PORTFOLIO', font);
       const A = sampleWord('PORTFOLIO', N, norm, font);
-      const B = sampleWord('LOHITHA', N, norm, font);
-      wordRatio.v = measure('LOHITHA', font) / norm;
+      const B = sampleWord('SAHIL', N, norm, font);
+      wordRatio.v = measure('SAHIL', font) / norm;
       const R = new Float32Array(N * 3);
       const rnd = new Float32Array(N);
       for (let i = 0; i < N; i++) {
@@ -189,19 +179,6 @@ export default function Hero() {
         },
       }),
     []
-  );
-
-  const portraitMat = useMemo(
-    () =>
-      new THREE.ShaderMaterial({
-        vertexShader: portraitVert,
-        fragmentShader: portraitFrag,
-        transparent: true,
-        depthWrite: false,
-        depthTest: false,
-        uniforms: { uTex: { value: tex }, uProgress: { value: 0 }, uTime: { value: 0 } },
-      }),
-    [tex]
   );
 
   /* responsive layout (units at camera distance 8) */
@@ -291,11 +268,6 @@ export default function Hero() {
     if (store.hasPointer) u_.uMouse.value.copy(mouseLocal);
     else u_.uMouse.value.set(99, 99);
 
-    portraitMat.uniforms.uProgress.value = ease(reveal) * (1 - ease(clamp(exit * 2.4)));
-    portraitMat.uniforms.uTime.value = time;
-    portrait.current.position.y = lay.py + Math.sin(time * 0.6) * 0.02;
-    halo.current.material.opacity = 0.16 * ease(reveal) * (1 - clamp(exit * 2.4));
-
     // smoke: billows in as she forms, settles to her feet, swallows her again on scroll
     const burst = Math.sin(clamp(exit * 2.0) * Math.PI) * (1 - clamp(exit * 1.6 - 0.6));
     const amount = smokeIn * 0.95 - smokeOut * 0.8 + burst * 0.9;
@@ -310,19 +282,6 @@ export default function Hero() {
   return (
     <group ref={rootRef}>
       <group ref={textGroup}>{data && <points geometry={data.geo} material={pointsMat} frustumCulled={false} />}</group>
-      <mesh ref={halo} position={[0, lay.py + lay.H * 0.12, -0.4]} renderOrder={3}>
-        <planeGeometry args={[lay.W * 1.6, lay.H * 1.1]} />
-        <meshBasicMaterial map={glowTexture()} transparent opacity={0} depthWrite={false} blending={THREE.AdditiveBlending} />
-      </mesh>
-      <mesh ref={portrait} material={portraitMat} renderOrder={5} position={[0, lay.py, 0]}>
-        <planeGeometry args={[lay.W, lay.H]} />
-      </mesh>
-      <mesh material={veils[1]} position={[0, lay.py - lay.H * 0.2, -0.7]} renderOrder={4}>
-        <planeGeometry args={[lay.visW * 1.3, lay.H * 1.55]} />
-      </mesh>
-      <mesh material={veils[0]} position={[0, lay.py - lay.H * 0.25, 0.5]} renderOrder={6}>
-        <planeGeometry args={[lay.visW * 1.2, lay.H * 1.5]} />
-      </mesh>
     </group>
   );
 }
