@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const Icons = {
+  github: (
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.05c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.93.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.12 2.95.71.78 1.14 1.77 1.14 2.99 0 4.29-2.61 5.23-5.1 5.51.4.35.75 1.03.75 2.08V22c0 .29.2.63.77.52A11.1 11.1 0 0 0 12 .9Z"/></svg>
+  ),
+
   mail: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <rect x="3" y="5" width="18" height="14" rx="2.5" />
@@ -66,15 +70,9 @@ export default function Contact() {
       </h2>
       <div className="ct-row">
         <div className="socials">
-          <Magnetic className="soc" label="Email">
-            {Icons.mail}
-          </Magnetic>
-          <Magnetic className="soc" label="LinkedIn">
-            {Icons.linkedin}
-          </Magnetic>
-          <Magnetic className="soc" label="Phone">
-            {Icons.phone}
-          </Magnetic>
+          <a className="soc" href="https://github.com/sangwan99-a" target="_blank" rel="noreferrer" aria-label="GitHub">
+            {Icons.github}
+          </a>
         </div>
         <Magnetic className={`resume r-${resume}`} label="Résumé" onClick={() => resume === 'idle' && setResume('busy')}>
           <span className="resume-ic">{Icons.arrow}</span>
@@ -83,8 +81,8 @@ export default function Contact() {
         </Magnetic>
       </div>
       <footer className="foot">
-        <span className="mono dim">© 2026 Shamya Lohitha</span>
-        <span className="mono dim">Full Stack · AI</span>
+        <span className="mono dim">© 2026 Sahil Sangwan</span>
+        <span className="mono dim">Full Stack · Java · React</span>
       </footer>
     </div>
   );

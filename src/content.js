@@ -1,57 +1,52 @@
 export const GROUPS = {
-  Languages: ['C++', 'Java', 'Python', 'JavaScript', 'TypeScript', 'SQL'],
-  Frontend: ['React', 'React Native', 'HTML', 'CSS', 'Tailwind', 'Framer Motion'],
-  Backend: ['Node.js', 'Express', 'Spring Boot', 'FastAPI', 'Go', 'REST APIs'],
-  Data: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis'],
-  Tools: ['Docker', 'Git', 'JWT', 'Postman', 'Electron'],
-  Core: ['DSA', 'OOP', 'System Design', 'API Design', 'Machine Learning', 'NLP', 'Data Science'],
+  Languages: ['Java'],
+  Frontend: ['React'],
+  Backend: ['Spring Boot'],
+  Data: ['MongoDB', 'PostgreSQL'],
+  Cloud: ['AWS'],
+  Tools: ['Git', 'Jenkins'],
 };
 export const SKILLS = Object.entries(GROUPS).flatMap(([g, ws]) => ws.map((w) => ({ w, g })));
 
 export const PROJECTS = [
   {
-    tag: 'AI · Privacy',
-    title: 'PolicyGuard',
-    em: 'AI',
-    desc: 'Reads privacy policies and contracts so people don’t have to — risk detection, privacy alerts and a live risk score across web, desktop and mobile.',
-    stack: ['React', 'React Native', 'Electron', 'Node.js', 'OpenAI', 'MongoDB', 'Docker'],
+    tag: 'MICROSERVICES · JAVA',
+    title: 'File Management Microservices',
+    em: 'Cloud',
+    desc: 'A modular file-management platform built around Spring Boot services, including authentication, configuration, service discovery, and file operations, with a React frontend.',
+    stack: ['Java', 'Spring Boot', 'Microservices', 'React'],
+    url: 'https://github.com/sangwan99-a/file-management-microservices-app',
   },
   {
-    tag: 'ML · Real-time',
-    title: 'Release Risk',
-    em: 'Heatmap',
-    desc: 'A Random Forest model classifies every software release by risk, mapped as a live heatmap across teams and modules.',
-    stack: ['TypeScript', 'React', 'FastAPI', 'scikit-learn', 'PostgreSQL'],
+    tag: 'FULL-STACK · TYPESCRIPT',
+    title: 'Backend Platform',
+    em: 'Services',
+    desc: 'A multi-service application with a React, TypeScript, and Electron frontend, an API gateway, and dedicated services for billing, chat, email, file management, and logs.',
+    stack: ['TypeScript', 'React', 'Electron', 'Microservices'],
+    url: 'https://github.com/sangwan99-a/Backend',
   },
   {
-    tag: 'AI · Fashion',
-    title: 'StarCloset',
-    em: 'Myntra',
-    desc: 'A conversational AI stylist that builds head-to-toe outfits from your occasion, budget and taste — powered by stylist personas.',
-    stack: ['Go', 'Gin', 'Redis', 'PostgreSQL', 'LLM', 'Framer Motion'],
+    tag: 'BACKEND · JAVA',
+    title: 'Elite School',
+    em: 'Management',
+    desc: 'A Spring Boot school-management backend with student, class, and user APIs, plus integrations and infrastructure for AWS, Kafka, and Memcached.',
+    stack: ['Java', 'Spring Boot', 'AWS', 'Kafka', 'Memcached'],
+    url: 'https://github.com/sangwan99-a/elite-school',
   },
 ];
 
+// Verified profile facts only; no unprovided coding-platform metrics are shown.
 export const STATS = [
-  { label: 'LeetCode', value: 450, suffix: '+', h: 4.5 },
-  { label: 'CodeChef', value: 500, suffix: '+', h: 5.0 },
-  { label: 'GeeksforGeeks', value: 280, suffix: '+', h: 2.8 },
-  { label: 'HackerRank', value: 20, suffix: '★', h: 2.0 },
+  { label: 'Featured projects', value: 3, suffix: '', h: 0.7 },
+  { label: 'Degrees completed', value: 2, suffix: '', h: 0.55 },
+  { label: 'Core technologies', value: 8, suffix: '', h: 0.85 },
+  { label: 'GitHub profile', value: 1, suffix: '', h: 0.4 },
 ];
 
 export const JOURNEY = [
-  { year: '2021', role: 'Intermediate, MPC', place: 'Sri Chaitanya Junior College', note: '2021 — 2023 · 90.6%' },
-  { year: '2023', role: 'B.Tech, Data Science', place: 'Aditya College of Engineering & Technology', note: '2023 — 2027 · CGPA 9.07 · Department Topper' },
-  { year: '2026', role: 'Full Stack Intern', place: 'Technical Hub', note: 'May — June · Web & mobile apps with React Native' },
+  { year: '2024', role: 'Bachelor of Arts (B.A.)', place: 'SGT University, Gurugram', note: 'Completed in 2024' },
+  { year: '2026', role: 'Master of Arts (M.A.)', place: 'SGT University, Gurugram', note: 'Completed in 2026' },
+  { year: 'NOW', role: 'Full Stack Development', place: 'Independent project work', note: 'Building with Java, Spring Boot, React, and cloud technologies' },
 ];
 
-export const CERTS = [
-  ['MongoDB', 'Associate Developer'],
-  ['Oracle', 'Java Foundations Associate'],
-  ['Microsoft', 'GitHub Foundations'],
-  ['Google Cloud', 'Career Launchpad — Data Analytics'],
-  ['Cisco', 'JavaScript Essentials 1 & 2'],
-  ['Cisco', 'Python & Intro to Data Science'],
-  ['Certiport · Pearson', 'HTML & CSS'],
-  ['CLA', 'Programming Essentials in C / C++'],
-];
+export const CERTS = [];

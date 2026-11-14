@@ -13,8 +13,8 @@ function drawPolicy(g, t) {
   g.fillRect(0, 0, SW, SH);
   g.font = '500 18px "JetBrains Mono"';
   g.fillStyle = 'rgba(255,255,255,.45)';
-  g.fillText('POLICY  SCAN', 48, 70);
-  g.fillText('● LIVE', SW - 130, 70);
+  g.fillText('JAVA  API', 48, 70);
+  g.fillText('● ONLINE', SW - 130, 70);
   // document
   const dx = 48, dy = 110, dw = SW - 96, dh = 520;
   g.fillStyle = '#121214';
@@ -62,7 +62,7 @@ function drawPolicy(g, t) {
   g.fillText(String(Math.round(v * 100)), cx, cy + 14);
   g.font = '500 13px "JetBrains Mono"';
   g.fillStyle = 'rgba(255,255,255,.45)';
-  g.fillText('RISK SCORE', cx, cy + 40);
+  g.fillText('API HEALTH', cx, cy + 40);
   g.textAlign = 'left';
 }
 
@@ -71,8 +71,8 @@ function drawHeat(g, t) {
   g.fillRect(0, 0, SW, SH);
   g.font = '500 18px "JetBrains Mono"';
   g.fillStyle = 'rgba(255,255,255,.45)';
-  g.fillText('RELEASE RISK', 48, 70);
-  g.fillText('v4.2', SW - 100, 70);
+  g.fillText('DEPLOYMENT', 48, 70);
+  g.fillText('BUILD 01', SW - 100, 70);
   const cols = 9, rows = 15, pad = 48, gap = 6;
   const cw = (SW - pad * 2 - gap * (cols - 1)) / cols;
   for (let y = 0; y < rows; y++)
@@ -101,12 +101,12 @@ function drawCloset(g, t) {
   g.fillRect(0, 0, SW, SH);
   g.font = '500 18px "JetBrains Mono"';
   g.fillStyle = 'rgba(255,255,255,.45)';
-  g.fillText('AI  STYLIST', 48, 70);
+  g.fillText('DATA  PLATFORM', 48, 70);
   const cx = SW / 2, cy = 420;
   const rings = [
-    [190, 70, 0.4, 'OCCASION'],
-    [140, 120, -0.6, 'BUDGET'],
-    [215, 150, 1.2, 'STYLE'],
+    [190, 70, 0.4, 'SERVICES'],
+    [140, 120, -0.6, 'DATABASE'],
+    [215, 150, 1.2, 'CLOUD'],
   ];
   rings.forEach(([rx, ry, rot, label], i) => {
     g.save();
@@ -147,10 +147,10 @@ function drawCloset(g, t) {
   g.font = '300 44px "Inter Tight"';
   g.fillStyle = '#fff';
   g.textAlign = 'center';
-  g.fillText('Head-to-toe', cx, 760);
+  g.fillText('Full-stack', cx, 760);
   g.font = 'italic 400 40px "Instrument Serif"';
   g.fillStyle = 'rgba(255,255,255,.6)';
-  g.fillText('in one conversation', cx, 808);
+  g.fillText('built end to end', cx, 808);
   g.textAlign = 'left';
 }
 
