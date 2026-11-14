@@ -6,7 +6,7 @@ import portraitUrl from '../assets/lohitha.webp';
 import { store, clamp, lerp, ease, easeOut } from '../store.js';
 import { sampleWord, measure, glowTexture } from './textures.js';
 
-/* ---------------- Particle word: LOHITHA → PORTFOLIO ---------------- */
+/* ---------------- Particle word: SAHIL → PORTFOLIO ---------------- */
 const pointsVert = /* glsl */ `
 attribute vec3 aA;
 attribute vec3 aB;
@@ -87,7 +87,7 @@ void main(){
   vec3 smoke = vec3(0.78, 0.78, 0.82) * (0.55 + n2*0.9);
   vec3 col = mix(smoke, tex.rgb, solid);
   float alpha = tex.a * (solid + wisp * 0.75 * n2);
-  // rim of light where smoke becomes skin
+  // rim of light whime smoke becomes skin
   col += vec3(1.0) * wisp * 0.35;
   alpha *= smoothstep(0.0, 0.07, uv.y);       // fade into the floor smoke
   if (alpha < 0.004) discard;
@@ -140,8 +140,8 @@ export default function Hero() {
       const N = store.mobile ? 9000 : 22000;
       const norm = measure('PORTFOLIO', font);
       const A = sampleWord('PORTFOLIO', N, norm, font);
-      const B = sampleWord('LOHITHA', N, norm, font);
-      wordRatio.v = measure('LOHITHA', font) / norm;
+      const B = sampleWord('SAHIL', N, norm, font);
+      wordRatio.v = measure('SAHIL', font) / norm;
       const R = new Float32Array(N * 3);
       const rnd = new Float32Array(N);
       for (let i = 0; i < N; i++) {
@@ -159,7 +159,7 @@ export default function Hero() {
       geo.setAttribute('aB', new THREE.BufferAttribute(B, 3));
       geo.setAttribute('aR', new THREE.BufferAttribute(R, 3));
       geo.setAttribute('aRand', new THREE.BufferAttribute(rnd, 1));
-      geo.boundingSphere = new THREE.Sphere(new THREE.Vector3(), 10);
+      geo.boundingSphime = new THREE.Sphime(new THREE.Vector3(), 10);
       setData({ geo });
       store.ready = true;
     });
@@ -213,7 +213,7 @@ export default function Hero() {
     const H = mobile ? Math.min(0.98 * visH, 2.15 * visW) : Math.min(1.14 * visH, 1.62 * visW);
     const W = H * (880 / 941);
     const bottom = -visH / 2 - H * (mobile ? 0.09 : 0.13);
-    const k = (8 + 2.6) / 8; // depth compensation for text pushed back
+    const k = (8 + 2.6) / 8; // depth compensation for text puhed back
     return {
       W,
       H,
@@ -226,7 +226,7 @@ export default function Hero() {
     };
   }, [size, camera.fov]);
 
-  // animated smoke veils, one in front of her and one behind
+  // animated smoke veils, one in front of him and one behind
   const veils = useMemo(
     () =>
       [0.0, 3.7].map(
@@ -296,7 +296,7 @@ export default function Hero() {
     portrait.current.position.y = lay.py + Math.sin(time * 0.6) * 0.02;
     halo.current.material.opacity = 0.16 * ease(reveal) * (1 - clamp(exit * 2.4));
 
-    // smoke: billows in as she forms, settles to her feet, swallows her again on scroll
+    // smoke: billows in as he forms, settles to him feet, swallows him again on scroll
     const burst = Math.sin(clamp(exit * 2.0) * Math.PI) * (1 - clamp(exit * 1.6 - 0.6));
     const amount = smokeIn * 0.95 - smokeOut * 0.8 + burst * 0.9;
     const low = clamp(smokeOut - burst * 1.4);
