@@ -105,7 +105,7 @@ export default function Overlay({ ready }) {
           </div>
           <div className="hm-col right">
             <span className="mono dim">Java · React · Cloud</span>
-            <span>India · Available for opportunities</span>
+            <span>India</span>
           </div>
         </>,
         0.25
@@ -124,21 +124,21 @@ export default function Overlay({ ready }) {
           <div className="stats">
             <div>
               <b>
-                <Count to={0} decimals={0} on={onSet.about} />
+                <Count to={2024} decimals={0} on={onSet.about} />
               </b>
-              <span className="mono dim">Add CGPA</span>
+              <span className="mono dim">B.A. completed</span>
             </div>
             <div>
               <b>
-                <Count to={0} on={onSet.about} />
+                <Count to={2026} on={onSet.about} />
               </b>
-              <span className="mono dim">Add achievements</span>
+              <span className="mono dim">M.A. completed</span>
             </div>
             <div>
               <b>
-                0<Count to={0} on={onSet.about} />
+                <Count to={8} on={onSet.about} />
               </b>
-              <span className="mono dim">Add credentials</span>
+              <span className="mono dim">Core technologies</span>
             </div>
           </div>
         </>
@@ -159,7 +159,7 @@ export default function Overlay({ ready }) {
             </div>
             <span className="mono dim wc-tag">{p.tag}</span>
             <h3 className="wc-title">
-              <Words text={`${p.title} *${p.em}*`} />
+              <a href={p.url} target="_blank" rel="noreferrer"><Words text={`${p.title} *${p.em}*`} /></a>
             </h3>
             <p className="wc-desc">{p.desc}</p>
             <ul className="chips">
@@ -276,9 +276,9 @@ export default function Overlay({ ready }) {
         I.certs,
         'pnl-certs',
         <>
-          <span className="mono dim">(06) Credentials</span>
+          <span className="mono dim">(06) Learning & Credentials</span>
           <h2 className="big">
-            <Words text="Your *certifications*" />
+            <Words text="Certifications *coming soon*" />
           </h2>
         </>,
         0.4
