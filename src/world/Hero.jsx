@@ -159,7 +159,7 @@ export default function Hero() {
       geo.setAttribute('aB', new THREE.BufferAttribute(B, 3));
       geo.setAttribute('aR', new THREE.BufferAttribute(R, 3));
       geo.setAttribute('aRand', new THREE.BufferAttribute(rnd, 1));
-      geo.boundingSphime = new THREE.Sphime(new THREE.Vector3(), 10);
+      geo.boundingSphere = new THREE.Sphere(new THREE.Vector3(), 10);
       setData({ geo });
       store.ready = true;
     });
