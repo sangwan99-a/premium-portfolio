@@ -68,7 +68,8 @@ export default function App() {
           <Canvas
             eventSource={document.getElementById('root')}
             eventPrefix="client"
-            dpr={[1, store.mobile ? 2 : 2]}
+            // Lower pixel ratio reduces GPU fill cost, especially on high-density phones.
+            dpr={[1, store.mobile ? 1.25 : 1.5]}
             gl={{ antialias: false, powerPreference: 'high-performance', alpha: false }}
             camera={{ fov: store.mobile ? 54 : 40, near: 0.1, far: 420, position: [0, 0, 8] }}
           >
