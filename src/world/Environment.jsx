@@ -51,7 +51,7 @@ void main(){ float d = length(gl_PointCoord-0.5); gl_FragColor = vec4(vec3(1.0),
 export function Dust() {
   const { gl } = useThree();
   const geo = useMemo(() => {
-    const N = store.mobile ? 2200 : 4200;
+    const N = store.mobile ? 700 : 1800;
     const p = new Float32Array(N * 3);
     const r = new Float32Array(N);
     for (let i = 0; i < N; i++) {
