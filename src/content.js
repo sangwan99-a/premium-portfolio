@@ -1,10 +1,11 @@
 export const GROUPS = {
-  Languages: ['Java'],
-  Frontend: ['React'],
+  Languages: ['Java', 'Dart', 'SQL'],
+  Frontend: ['React', 'Angular'],
+  'Mobile Development': ['Flutter', 'React Native'],
   Backend: ['Spring Boot'],
   Databases: ['MongoDB', 'PostgreSQL'],
-  'Cloud & DevOps': ['AWS', 'Jenkins'],
-  Tools: ['Git'],
+  'Cloud & DevOps': ['AWS', 'Azure', 'Jenkins', 'Docker'],
+  Tools: ['Git', 'GitHub', 'Bitbucket'],
 };
 export const SKILLS = Object.entries(GROUPS).flatMap(([g, ws]) => ws.map((w) => ({ w, g })));
 
