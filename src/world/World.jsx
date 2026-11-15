@@ -62,10 +62,10 @@ export default function World() {
       <Dust />
       <GroundMist />
       <EffectComposer multisampling={0} disableNormalPass>
-        <Bloom mipmapBlur intensity={mobile ? 0.8 : 1.05} luminanceThreshold={0.62} luminanceSmoothing={0.25} radius={0.75} />
-        <Noise opacity={0.16} blendFunction={BlendFunction.OVERLAY} />
+        <Bloom mipmapBlur intensity={mobile ? 0.72 : 1.05} luminanceThreshold={0.62} luminanceSmoothing={0.25} radius={0.75} />
+        {!mobile && <Noise opacity={0.16} blendFunction={BlendFunction.OVERLAY} />}
         <Vignette offset={0.25} darkness={0.75} />
-        <SMAA />
+        {!mobile && <SMAA />}
       </EffectComposer>
     </>
   );
