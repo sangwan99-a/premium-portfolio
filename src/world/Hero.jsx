@@ -137,7 +137,7 @@ export default function Hero() {
     const timeout = new Promise((r) => setTimeout(r, 2500));
     Promise.race([Promise.all([document.fonts.load(font), document.fonts.load('400 40px "Instrument Serif"'), document.fonts.load('500 20px "JetBrains Mono"')]), timeout]).then(() => {
       if (!alive) return;
-      const N = store.mobile ? 9000 : 22000;
+      const N = store.mobile ? 5000 : 12000;
       const norm = measure('PORTFOLIO', font);
       const A = sampleWord('PORTFOLIO', N, norm, font);
       const B = sampleWord('SAHIL', N, norm, font);
