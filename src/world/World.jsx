@@ -60,7 +60,7 @@ export default function World() {
       <Horizon />
       <Floor />
       <Dust />
-      <GroundMist />
+      {!mobile && <GroundMist />}
       <EffectComposer multisampling={0} disableNormalPass>
         <Bloom mipmapBlur intensity={mobile ? 0.72 : 1.05} luminanceThreshold={0.62} luminanceSmoothing={0.25} radius={0.75} />
         {!mobile && <Noise opacity={0.16} blendFunction={BlendFunction.OVERLAY} />}
