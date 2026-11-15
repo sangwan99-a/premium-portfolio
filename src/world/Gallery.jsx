@@ -6,7 +6,7 @@ import { store } from '../store.js';
 
 const SW = 512;
 const SH = 900;
-const RES = 1.6; // supersampled screens
+const RES = 1.1; // lighter canvas textures to reduce GPU memory and upload cost
 
 function drawPolicy(g, t) {
   g.fillStyle = '#0b0b0c';
@@ -196,7 +196,7 @@ function Monolith({ i, pos }) {
     root.current.visible = d < 50;
     if (!root.current.visible) return;
     const t = s.clock.elapsedTime;
-    if (d < 32 && frame++ % 2 === 0) {
+    if (d < 32 && frame++ % 3 === 0) {
       DRAW[i](ctx, t);
       tex.needsUpdate = true;
     }
