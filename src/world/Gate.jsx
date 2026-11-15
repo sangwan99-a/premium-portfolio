@@ -33,7 +33,7 @@ export default function Gate() {
   useCull(root, L.gate.z, 31);
 
   const geo = useMemo(() => {
-    const N = store.mobile ? 4000 : 7000;
+    const N = store.mobile ? 1800 : 4000;
     const p = new Float32Array(N * 3);
     const r = new Float32Array(N);
     for (let i = 0; i < N; i++) {
