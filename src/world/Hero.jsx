@@ -6,7 +6,7 @@ import portraitUrl from '../assets/lohitha.webp';
 import { store, clamp, lerp, ease, easeOut } from '../store.js';
 import { sampleWord, measure, glowTexture } from './textures.js';
 
-/* ---------------- Particle word: SAHIL → PORTFOLIO ---------------- */
+/* ---------------- Particle word: WELCOME → SAHIL ---------------- */
 const pointsVert = /* glsl */ `
 attribute vec3 aA;
 attribute vec3 aB;
@@ -138,8 +138,8 @@ export default function Hero() {
     Promise.race([Promise.all([document.fonts.load(font), document.fonts.load('400 40px "Instrument Serif"'), document.fonts.load('500 20px "JetBrains Mono"')]), timeout]).then(() => {
       if (!alive) return;
       const N = store.mobile ? 5000 : 12000;
-      const norm = measure('PORTFOLIO', font);
-      const A = sampleWord('PORTFOLIO', N, norm, font);
+      const norm = measure('WELCOME', font);
+      const A = sampleWord('WELCOME', N, norm, font);
       const B = sampleWord('SAHIL', N, norm, font);
       wordRatio.v = measure('SAHIL', font) / norm;
       const R = new Float32Array(N * 3);
